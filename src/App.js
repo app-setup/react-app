@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { ICarousel, TodoList } from './components/';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [ todos ] = useState([{
+        title: "Book",
+        description: "This is a book"
+      },
+      {
+        title: "Apple",
+        description: "This is an apple"
+      },
+      {
+        title: "Orange",
+        description: "This is an orange"
+      }
+    ])
+
+    return (
+      <div className = "App" >
+        <h1> App </h1>
+        <ICarousel />
+        <TodoList todos={todos} />
+      </div>
+    );
 }
 
 export default App;
