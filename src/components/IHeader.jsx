@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function IHeader() {
   return (
@@ -20,12 +21,13 @@ function IHeader() {
         id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <a className="nav-link" href="/">
-              Home <span className="sr-only">(current)</span>
-          </a>
+            <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/">Link</a>
+          <Link className="nav-link" to="/todos">Todos</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/about">About</Link>
         </li>
       </ul>
     </div>
