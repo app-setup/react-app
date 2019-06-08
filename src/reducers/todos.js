@@ -1,5 +1,8 @@
 const todos = (state = [], { type, ...payload }) => {
   switch (type) {
+    case 'FETCH_TODOS':
+      state = payload.todos;
+      return [...state];
     case 'ADD_TODO':
       return [
         ...state,
