@@ -8,8 +8,8 @@ function TodoItem({todo, handleComplete, handleRemove }) {
         <p>{todo.description}</p>
       </div>
       <div className="">
-        <input type="checkbox" className="form-check-input" checked={todo.complete} onChange={() => handleComplete(todo.id)}/>
-        <button type="button" className="btn btn-link" onClick={() =>handleRemove(todo.id)}>x</button>
+        <input type="checkbox" className="form-check-input" checked={todo.complete} onChange={handleComplete}/>
+        <button type="button" className="btn btn-link" onClick={handleRemove}>x</button>
       </div>
     </div>
   )
